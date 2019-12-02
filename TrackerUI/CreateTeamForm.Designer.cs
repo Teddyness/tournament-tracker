@@ -35,17 +35,27 @@
             this.addMemberButton = new System.Windows.Forms.Button();
             this.selectTeamMemberDropDown = new System.Windows.Forms.ComboBox();
             this.selectTeamMemberLabel = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.addNewMemberGroupBox = new System.Windows.Forms.GroupBox();
             this.firstNameValue = new System.Windows.Forms.TextBox();
             this.firstNameLabel = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.lastNameValue = new System.Windows.Forms.TextBox();
+            this.lastNameLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.cellPhoneValue = new System.Windows.Forms.TextBox();
+            this.cellPhoneLabel = new System.Windows.Forms.Label();
+            this.createMemberbutton = new System.Windows.Forms.Button();
+            this.teamMembersListBox = new System.Windows.Forms.ListBox();
+            this.deleteSelectedMemberButton = new System.Windows.Forms.Button();
+            this.createTeamtbutton = new System.Windows.Forms.Button();
+            this.addNewMemberGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // teamNameValue
             // 
             this.teamNameValue.Location = new System.Drawing.Point(20, 88);
             this.teamNameValue.Name = "teamNameValue";
-            this.teamNameValue.Size = new System.Drawing.Size(253, 20);
+            this.teamNameValue.Size = new System.Drawing.Size(319, 20);
             this.teamNameValue.TabIndex = 14;
             // 
             // teamNameLabel
@@ -80,19 +90,20 @@
             this.addMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addMemberButton.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addMemberButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.addMemberButton.Location = new System.Drawing.Point(60, 191);
+            this.addMemberButton.Location = new System.Drawing.Point(110, 201);
             this.addMemberButton.Name = "addMemberButton";
-            this.addMemberButton.Size = new System.Drawing.Size(177, 54);
+            this.addMemberButton.Size = new System.Drawing.Size(150, 36);
             this.addMemberButton.TabIndex = 20;
             this.addMemberButton.Text = "Add Member";
             this.addMemberButton.UseVisualStyleBackColor = true;
+            this.addMemberButton.Click += new System.EventHandler(this.addMemberButton_Click);
             // 
             // selectTeamMemberDropDown
             // 
             this.selectTeamMemberDropDown.FormattingEnabled = true;
             this.selectTeamMemberDropDown.Location = new System.Drawing.Point(20, 164);
             this.selectTeamMemberDropDown.Name = "selectTeamMemberDropDown";
-            this.selectTeamMemberDropDown.Size = new System.Drawing.Size(266, 21);
+            this.selectTeamMemberDropDown.Size = new System.Drawing.Size(319, 21);
             this.selectTeamMemberDropDown.TabIndex = 19;
             // 
             // selectTeamMemberLabel
@@ -107,22 +118,31 @@
             this.selectTeamMemberLabel.TabIndex = 18;
             this.selectTeamMemberLabel.Text = "Select Team Member";
             // 
-            // groupBox1
+            // addNewMemberGroupBox
             // 
-            this.groupBox1.Controls.Add(this.firstNameValue);
-            this.groupBox1.Controls.Add(this.firstNameLabel);
-            this.groupBox1.Location = new System.Drawing.Point(20, 279);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(234, 154);
-            this.groupBox1.TabIndex = 21;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add New Member";
+            this.addNewMemberGroupBox.Controls.Add(this.createMemberbutton);
+            this.addNewMemberGroupBox.Controls.Add(this.cellPhoneValue);
+            this.addNewMemberGroupBox.Controls.Add(this.cellPhoneLabel);
+            this.addNewMemberGroupBox.Controls.Add(this.textBox1);
+            this.addNewMemberGroupBox.Controls.Add(this.emailLabel);
+            this.addNewMemberGroupBox.Controls.Add(this.lastNameValue);
+            this.addNewMemberGroupBox.Controls.Add(this.lastNameLabel);
+            this.addNewMemberGroupBox.Controls.Add(this.firstNameValue);
+            this.addNewMemberGroupBox.Controls.Add(this.firstNameLabel);
+            this.addNewMemberGroupBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewMemberGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.addNewMemberGroupBox.Location = new System.Drawing.Point(20, 260);
+            this.addNewMemberGroupBox.Name = "addNewMemberGroupBox";
+            this.addNewMemberGroupBox.Size = new System.Drawing.Size(319, 263);
+            this.addNewMemberGroupBox.TabIndex = 21;
+            this.addNewMemberGroupBox.TabStop = false;
+            this.addNewMemberGroupBox.Text = "Add New Member";
             // 
             // firstNameValue
             // 
-            this.firstNameValue.Location = new System.Drawing.Point(78, 39);
+            this.firstNameValue.Location = new System.Drawing.Point(127, 45);
             this.firstNameValue.Name = "firstNameValue";
-            this.firstNameValue.Size = new System.Drawing.Size(52, 20);
+            this.firstNameValue.Size = new System.Drawing.Size(168, 29);
             this.firstNameValue.TabIndex = 11;
             this.firstNameValue.TextChanged += new System.EventHandler(this.teamOneScoreValue_TextChanged);
             // 
@@ -131,20 +151,143 @@
             this.firstNameLabel.AutoSize = true;
             this.firstNameLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.firstNameLabel.Location = new System.Drawing.Point(7, 29);
+            this.firstNameLabel.Location = new System.Drawing.Point(7, 45);
             this.firstNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(64, 30);
+            this.firstNameLabel.Size = new System.Drawing.Size(113, 30);
             this.firstNameLabel.TabIndex = 10;
-            this.firstNameLabel.Text = "Score";
+            this.firstNameLabel.Text = "First Name";
+            // 
+            // lastNameValue
+            // 
+            this.lastNameValue.Location = new System.Drawing.Point(126, 89);
+            this.lastNameValue.Name = "lastNameValue";
+            this.lastNameValue.Size = new System.Drawing.Size(169, 29);
+            this.lastNameValue.TabIndex = 13;
+            this.lastNameValue.TextChanged += new System.EventHandler(this.lastNameValue_TextChanged);
+            // 
+            // lastNameLabel
+            // 
+            this.lastNameLabel.AutoSize = true;
+            this.lastNameLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.lastNameLabel.Location = new System.Drawing.Point(7, 89);
+            this.lastNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lastNameLabel.Name = "lastNameLabel";
+            this.lastNameLabel.Size = new System.Drawing.Size(112, 30);
+            this.lastNameLabel.TabIndex = 12;
+            this.lastNameLabel.Text = "Last Name";
+            this.lastNameLabel.Click += new System.EventHandler(this.lastNameLabel_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(127, 133);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(168, 29);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.emailLabel.Location = new System.Drawing.Point(8, 133);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(63, 30);
+            this.emailLabel.TabIndex = 14;
+            this.emailLabel.Text = "Email";
+            this.emailLabel.Click += new System.EventHandler(this.emailLabel_Click);
+            // 
+            // cellPhoneValue
+            // 
+            this.cellPhoneValue.Location = new System.Drawing.Point(127, 172);
+            this.cellPhoneValue.Name = "cellPhoneValue";
+            this.cellPhoneValue.Size = new System.Drawing.Size(168, 29);
+            this.cellPhoneValue.TabIndex = 17;
+            this.cellPhoneValue.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // cellPhoneLabel
+            // 
+            this.cellPhoneLabel.AutoSize = true;
+            this.cellPhoneLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cellPhoneLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.cellPhoneLabel.Location = new System.Drawing.Point(8, 171);
+            this.cellPhoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cellPhoneLabel.Name = "cellPhoneLabel";
+            this.cellPhoneLabel.Size = new System.Drawing.Size(106, 30);
+            this.cellPhoneLabel.TabIndex = 16;
+            this.cellPhoneLabel.Text = "Cellphone";
+            this.cellPhoneLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // createMemberbutton
+            // 
+            this.createMemberbutton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.createMemberbutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.createMemberbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.createMemberbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createMemberbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createMemberbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.createMemberbutton.Location = new System.Drawing.Point(66, 207);
+            this.createMemberbutton.Name = "createMemberbutton";
+            this.createMemberbutton.Size = new System.Drawing.Size(175, 37);
+            this.createMemberbutton.TabIndex = 21;
+            this.createMemberbutton.Text = "Create Member";
+            this.createMemberbutton.UseVisualStyleBackColor = true;
+            this.createMemberbutton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // teamMembersListBox
+            // 
+            this.teamMembersListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.teamMembersListBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teamMembersListBox.FormattingEnabled = true;
+            this.teamMembersListBox.ItemHeight = 30;
+            this.teamMembersListBox.Location = new System.Drawing.Point(373, 88);
+            this.teamMembersListBox.Name = "teamMembersListBox";
+            this.teamMembersListBox.Size = new System.Drawing.Size(300, 422);
+            this.teamMembersListBox.TabIndex = 22;
+            // 
+            // deleteSelectedMemberButton
+            // 
+            this.deleteSelectedMemberButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.deleteSelectedMemberButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.deleteSelectedMemberButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.deleteSelectedMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteSelectedMemberButton.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteSelectedMemberButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.deleteSelectedMemberButton.Location = new System.Drawing.Point(684, 305);
+            this.deleteSelectedMemberButton.Name = "deleteSelectedMemberButton";
+            this.deleteSelectedMemberButton.Size = new System.Drawing.Size(111, 70);
+            this.deleteSelectedMemberButton.TabIndex = 23;
+            this.deleteSelectedMemberButton.Text = "Delete Selected";
+            this.deleteSelectedMemberButton.UseVisualStyleBackColor = true;
+            // 
+            // createTeamtbutton
+            // 
+            this.createTeamtbutton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.createTeamtbutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.createTeamtbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.createTeamtbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createTeamtbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createTeamtbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.createTeamtbutton.Location = new System.Drawing.Point(312, 549);
+            this.createTeamtbutton.Name = "createTeamtbutton";
+            this.createTeamtbutton.Size = new System.Drawing.Size(207, 41);
+            this.createTeamtbutton.TabIndex = 26;
+            this.createTeamtbutton.Text = "Create Team";
+            this.createTeamtbutton.UseVisualStyleBackColor = true;
             // 
             // CreateTeamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(685, 493);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(807, 602);
+            this.Controls.Add(this.createTeamtbutton);
+            this.Controls.Add(this.deleteSelectedMemberButton);
+            this.Controls.Add(this.teamMembersListBox);
+            this.Controls.Add(this.addNewMemberGroupBox);
             this.Controls.Add(this.addMemberButton);
             this.Controls.Add(this.selectTeamMemberDropDown);
             this.Controls.Add(this.selectTeamMemberLabel);
@@ -154,8 +297,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateTeamForm";
             this.Text = "Create Team";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.addNewMemberGroupBox.ResumeLayout(false);
+            this.addNewMemberGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,8 +312,18 @@
         private System.Windows.Forms.Button addMemberButton;
         private System.Windows.Forms.ComboBox selectTeamMemberDropDown;
         private System.Windows.Forms.Label selectTeamMemberLabel;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox addNewMemberGroupBox;
         private System.Windows.Forms.TextBox firstNameValue;
         private System.Windows.Forms.Label firstNameLabel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.TextBox lastNameValue;
+        private System.Windows.Forms.Label lastNameLabel;
+        private System.Windows.Forms.TextBox cellPhoneValue;
+        private System.Windows.Forms.Label cellPhoneLabel;
+        private System.Windows.Forms.Button createMemberbutton;
+        private System.Windows.Forms.ListBox teamMembersListBox;
+        private System.Windows.Forms.Button deleteSelectedMemberButton;
+        private System.Windows.Forms.Button createTeamtbutton;
     }
 }
